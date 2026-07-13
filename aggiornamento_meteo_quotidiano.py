@@ -6,8 +6,8 @@ import requests
 from datetime import datetime, timedelta
 from groq import Groq
 
-LAT = 45.07347491421504
-LON = 7.543461388723449
+LAT = 45.066004728662755
+LON = 7.570659744398286
 
 GIORNI_IT = {0: "lunedì", 1: "martedì", 2: "mercoledì", 3: "giovedì", 4: "venerdì", 5: "sabato", 6: "domenica"}
 MESI_IT = {1: "gennaio", 2: "febbraio", 3: "marzo", 4: "aprile", 5: "maggio", 6: "giugno", 
@@ -105,7 +105,7 @@ def interpella_groq(dati_testuali, oggi_str, domani_str):
     client = Groq(api_key=api_key)
     
     prompt = f"""
-    Sei un meteorologo professionista. Il tuo compito è scrivere un bollettino discorsivo, fluido ed elegante per Rivoli (TO) partendo dalla sintesi oraria fornita.
+    Sei un meteorologo professionista. Il tuo compito è scrivere un bollettino discorsivo, fluido ed elegante per Grugliasco (TO) partendo dalla sintesi oraria fornita.
     
     REGOLE FERREE (PENA IL FALLIMENTO):
     1. TITOLO E IMPAGINAZIONE: Inizia ESATTAMENTE con: <b>Aggiornamento meteo di {oggi_str}</b>. Lascia SEMPRE una riga vuota tra il titolo e il primo paragrafo, e una riga vuota tra i paragrafi.
